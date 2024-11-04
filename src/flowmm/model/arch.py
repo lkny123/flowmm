@@ -71,7 +71,7 @@ class CSPLayer(DiffCSPLayer):
 
         self.represent_num_atoms = represent_num_atoms
         if represent_num_atoms:
-            self.one_hot_dim = 100  # largest cell of atoms that we'd represent, this is safe for a HACK
+            self.one_hot_dim = 2500  # largest cell of atoms that we'd represent, this is safe for a HACK
             self.num_atom_embedding = nn.Linear(
                 self.one_hot_dim, hidden_dim, bias=False
             )
