@@ -1,15 +1,16 @@
 name: flowmm
 channels:
+  - pytorch 
   - nvidia
-  - pytorch
   - conda-forge
   - defaults
   - pyg
 dependencies:
   # Riemannian FM
   - python==3.9
-  - pytorch==2.1.0
+  - pytorch==2.0.1
   - pytorch-cuda==11.8
+  - mkl==2024.0
   - igl==2.2.1
   - meshplot==0.4.0
   - matplotlib
@@ -77,5 +78,5 @@ dependencies:
     - -e remote/riemannian-fm
     - -e .
     # from here below, we use find-links
-    - --find-links https://data.pyg.org/whl/torch-2.1.0+cu118.html
+    - --find-links https://data.pyg.org/whl/torch-2.0.1+cu118.html
     - pyg_lib
